@@ -1,7 +1,5 @@
 package courceRegistration.Entity;
 
-import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -15,9 +13,9 @@ public class Registration {
 	private String studentName;
 	
 	private String courceName;
-	private Date registrationDate;
+	private String registrationDate;
 	
-	private double feesPaid;
+	private int feesPaid;
 
 	public int getId() {
 		return id;
@@ -43,19 +41,19 @@ public class Registration {
 		this.courceName = courceName;
 	}
 
-	public Date getRegistrationDate() {
+	public String getRegistrationDate() {
 		return registrationDate;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
+	public void setRegistrationDate(String registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 
-	public double getFeesPaid() {
+	public int getFeesPaid() {
 		return feesPaid;
 	}
 
-	public void setFeesPaid(double feesPaid) {
+	public void setFeesPaid(int feesPaid) {
 		this.feesPaid = feesPaid;
 	}
 
