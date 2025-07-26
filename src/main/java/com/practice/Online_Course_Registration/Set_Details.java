@@ -13,7 +13,7 @@ import courceRegistration.Utility.CourceRegistrationUtility;
 
 public class Set_Details {
 
-	public static void main(String[] args) {
+	public void Details() {
 		
 		SessionFactory factory = CourceRegistrationUtility.getSessionFactory();
         Session session = factory.openSession();

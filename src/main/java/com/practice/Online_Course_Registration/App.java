@@ -38,6 +38,11 @@ public class App {
 			break;
 
 		case 5:
+			Set_Details s = new Set_Details();
+			s.Details();
+			break;
+			
+		case 6:
 			System.out.println("Exiting program. Goodbye!");
 			System.exit(0); // Terminates the program immediately
 			break;
