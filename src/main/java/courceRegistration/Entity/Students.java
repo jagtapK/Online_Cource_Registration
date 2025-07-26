@@ -1,13 +1,13 @@
 package courceRegistration.Entity;
 
-import hibernateMapping.Entity.Document;
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-
+import jakarta.persistence.ManyToMany;
+@Entity
 public class Students {
 
 	@Id
@@ -19,6 +19,18 @@ public class Students {
 	private String Department;
 
 	private int mobileNo;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Doc_id")
+    private Registration registration;
+    
+    
+	public Registration getRegistration() {
+		return registration;
+	}
+
+	public void setRegistration(Registration registration) {
+		this.registration = registration;
+	}
 
 	public String getFname() {
 		return fname;
