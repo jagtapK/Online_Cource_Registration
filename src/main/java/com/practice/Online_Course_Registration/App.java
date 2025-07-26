@@ -13,7 +13,7 @@ public class App
     	System.out.println("Online COurce Registration! ");
 
 		System.out.println("Choose an option:" + "\n1.Registration for Cource" + "\n2.Update Fees Paid "
-				+ "\n3.Delete Registration By ID" + "\n4.View all record" + "\n5. Exit");
+				+ "\n3.Delete Registration By ID" + "\n4.View all record" + "\n5. Set_Details" + "\n6. Exit");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your Choice");
