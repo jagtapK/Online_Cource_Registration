@@ -1,12 +1,13 @@
 package courceRegistration.Entity;
 
-import jakarta.persistence.CascadeType;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+
 @Entity
 public class Students {
 
@@ -19,16 +20,15 @@ public class Students {
 	private String Department;
 
 	private int mobileNo;
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Doc_id")
-    private Registration registration;
+    @ManyToMany(mappedBy = "student")
+    private List<Registration> registration;
+
     
-    
-	public Registration getRegistration() {
+	public List<Registration> getRegistration() {
 		return registration;
 	}
 
-	public void setRegistration(Registration registration) {
+	public void setRegistration(List<Registration> registration) {
 		this.registration = registration;
 	}
 

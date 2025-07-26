@@ -1,7 +1,12 @@
 package courceRegistration.Entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -9,6 +14,7 @@ import jakarta.persistence.Table;
 public class Registration {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String studentName;
 	
@@ -16,6 +22,18 @@ public class Registration {
 	private String registrationDate;
 	
 	private int feesPaid;
+	
+	@ManyToMany
+	private List<Students> student;
+	
+	
+	public List<Students> getStudent() {
+		return student;
+	}
+
+	public void setStudent(List<Students> student) {
+		this.student = student;
+	}
 
 	public int getId() {
 		return id;
