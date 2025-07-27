@@ -41,13 +41,14 @@ public class RegisterForCourse {
 
 		System.out.println("Enter Fees Paid: ");
 		r.setFeesPaid(sc.nextInt());
+		sc.nextLine();
 
 		// 4.save process
 		session.persist(r);
-
-		System.out.println("Updated Successfully " + r);
+		
 		// 5.pass to database
 		transaction.commit();
 
+		System.out.println("Updated Successfully " + r);
 	}
 }

@@ -18,8 +18,8 @@ public class App {
 		switch (choice) {
 
 		case 1:
-			RegisterForCourse r = new RegisterForCourse();
-			r.Register();
+			RegisterForCourse r1 = new RegisterForCourse();
+			r1.Register();
 			break;
 
 		case 2:
