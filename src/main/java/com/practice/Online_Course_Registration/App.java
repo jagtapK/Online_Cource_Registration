@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Online COurce Registration! ");
+		System.out.println("Online Cource Registration! ");
 
 		System.out.println("Choose an option:" + "\n1.Registration for Cource" + "\n2.Update Fees Paid "
 				+ "\n3.Delete Registration By ID" + "\n4.View all record" + "\n5. Set_Details" + "\n6. Exit");
@@ -41,7 +41,7 @@ public class App {
 			Set_Details s = new Set_Details();
 			s.Details();
 			break;
-			
+
 		case 6:
 			System.out.println("Exiting program. Goodbye!");
 			System.exit(0); // Terminates the program immediately
