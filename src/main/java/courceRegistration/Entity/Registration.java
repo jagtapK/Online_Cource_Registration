@@ -13,20 +13,19 @@ import jakarta.persistence.Table;
 @Table(name = "registration")
 public class Registration {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String studentName;
-	
+
 	private String courceName;
 	private String registrationDate;
-	
+
 	private int feesPaid;
-	
+
 	@ManyToMany
 	private List<Students> student;
-	
-	
+
 	public List<Students> getStudent() {
 		return student;
 	}
@@ -80,6 +79,5 @@ public class Registration {
 		return "Registration [id=" + id + ", studentName=" + studentName + ", courceName=" + courceName
 				+ ", registrationDate=" + registrationDate + ", feesPaid=" + feesPaid + "]";
 	}
-	
-	
+
 }

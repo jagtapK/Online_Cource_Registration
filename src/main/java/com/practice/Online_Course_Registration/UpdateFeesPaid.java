@@ -12,23 +12,29 @@ import courceRegistration.Utility.CourceRegistrationUtility;
 public class UpdateFeesPaid {
 
 	public void updateFees() {
-	SessionFactory factory = CourceRegistrationUtility.getSessionFactory();
 
-	Session session = factory.openSession();
+		//Update Fees by Student Id
+		SessionFactory factory = CourceRegistrationUtility.getSessionFactory();
 
-	Transaction transaction = session.beginTransaction();
+		Session session = factory.openSession();
 
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter Paid Fees");
-	int fee = sc.nextInt();
-	
-	Registration r1 = session.find(Registration.class, fee);
-	System.out.println(r1.toString());
-	r1.setFeesPaid(fee);
-	
-	transaction.commit();
+		Transaction transaction = session.beginTransaction();
 
-	session.close();
-	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Student Id to Update paid Fees");
+		int Stu_Id = sc.nextInt();
+		sc.nextLine();
+
+		Registration r1 = session.find(Registration.class, Stu_Id);
+
+		System.out.println("Enter Updated Fees");
+		int stuFees = sc.nextInt();
+		r1.setFeesPaid(stuFees);
+
+		transaction.commit();
+
+		session.close();
+
+		System.out.println("Updated Paid Fees Successfully..!");
 	}
 }

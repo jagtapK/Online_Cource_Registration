@@ -15,6 +15,7 @@ public class Set_Details {
 
 	public void Details() {
 		
+		//Setting Student Details 
 		SessionFactory factory = CourceRegistrationUtility.getSessionFactory();
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();

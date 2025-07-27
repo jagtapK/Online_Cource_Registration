@@ -12,7 +12,8 @@ import courceRegistration.Utility.CourceRegistrationUtility;
 public class DeleteRegistrationByID {
 
 	public void deleteRegistration() {
-		
+ 
+		//Delete Existing Student Details By Id
 		SessionFactory factory = CourceRegistrationUtility.getSessionFactory();
 
 		Session session = factory.openSession();
@@ -22,12 +23,13 @@ public class DeleteRegistrationByID {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Registration ID");
 		int id = sc.nextInt();
-		
+
 		Registration r2 = session.find(Registration.class, id);
 		session.remove(r2);
-		
+
 		transaction.commit();
 		session.close();
-		
+		System.out.println("Data Deleted Successfully..!");
+
 	}
 }

@@ -20,10 +20,9 @@ public class Students {
 	private String Department;
 
 	private int mobileNo;
-    @ManyToMany(mappedBy = "student")
-    private List<Registration> registration;
+	@ManyToMany(mappedBy = "student")
+	private List<Registration> registration;
 
-    
 	public List<Registration> getRegistration() {
 		return registration;
 	}
