@@ -53,6 +53,7 @@ public class Set_Details {
         r2.setRegistrationDate("13/6/2022");
         r2.setFeesPaid(40000);
         
+        //List to store multiple Registration
         List<Registration> rlist = Arrays.asList(r,r1,r2);
         
         s.setRegistration(rlist);
@@ -69,6 +70,8 @@ public class Set_Details {
         
         transaction.commit();
         session.close();
+        
+        System.out.println("Details added Sccessfully..");
 	}
 
 }

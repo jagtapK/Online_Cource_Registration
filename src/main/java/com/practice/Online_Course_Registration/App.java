@@ -3,11 +3,18 @@ package com.practice.Online_Course_Registration;
 import java.util.Scanner;
 
 public class App {
+	
 	public static void main(String[] args) {
+		
 		System.out.println("Online Cource Registration! ");
 
-		System.out.println("Choose an option:" + "\n1.Registration for Cource" + "\n2.Update Fees Paid "
-				+ "\n3.Delete Registration By ID" + "\n4.View all record" + "\n5. Set_Details" + "\n6. Exit");
+		System.out.println("Choose an option:" + 
+				"\n1.Registration for Cource" + 
+				"\n2.Update Fees Paid "+ 
+				"\n3.Delete Registration By ID" + 
+				"\n4.View all record" + 
+				"\n5. Set_Details" + 
+				"\n6. Exit");
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your Choice");
@@ -46,6 +53,9 @@ public class App {
 			System.out.println("Exiting program. Goodbye!");
 			System.exit(0); // Terminates the program immediately
 			break;
+
+		default:
+			System.out.println("Invalid Choice! Enter a number between 1 to 6");
 		}
 
 	}
